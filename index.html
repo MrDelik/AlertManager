@@ -3,8 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Alert example</title>
+    <script type="module" src="exemple.js" defer></script>
 </head>
 <body>
+<main>
+    <section>
+        <h1>Alert example</h1>
+    </section>
+    <button class="show-alert-confirm">
+        Show alert confirm
+    </button>
+    <button class="show-alert-message">
+        Show alert message
+    </button>
+</main>
+<template id="alert-confirm-template">
+    <div class="alert-container">
+        <div class="alert filled gradient">
+            <!-- Type confirm -->
+            <div class="alert-header">
+                <svg version="1.1" class="alert-icon alert-icon-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 35" preserveAspectRatio="xMidYMid meet">
+                    <path d="M38.03,35H1.97c-0.7,0-1.36-0.37-1.71-0.99c-0.35-0.61-0.35-1.36,0.01-1.97L18.3,0.98
+                        C18.65,0.37,19.3,0,20,0c0.7,0,1.35,0.37,1.7,0.98l18.03,31.06c0.36,0.61,0.36,1.36,0,1.97C39.39,34.63,38.73,35,38.03,35z
+                         M20,24.34c-1.46-0.01-2.66,1.16-2.68,2.63c0.02,1.47,1.22,2.64,2.68,2.63c1.46,0.01,2.66-1.16,2.68-2.63
+                        C22.66,25.5,21.46,24.32,20,24.34z M17.32,11.19l1.82,10.52h1.82l1.73-10.52H17.32L17.32,11.19z"/>
+                </svg>
+                <div class="alert-icon alert-icon-success">
+                    <span class="v-icon"></span>
+                </div>
+                <div class="alert-icon alert-icon-error">
+                    <span class="x-icon"></span>
+                </div>
+            </div>
+            <div class="alert-body">
+                <div class="alert-title"></div>
+                <div class="alert-message"></div>
+            </div>
+            <div class="alert-footer">
+                <button class="btn btn-light-blue alert-confirm-button alert-confirm-cancel">
+                    No
+                </button>
+                <button class="btn btn-light-blue alert-confirm-button alert-confirm-valid">
+                    Yes
+                </button>
+            </div>
 
+            <!-- dismiss the alert is dissmissible -->
+            <button type="button" class="btn-reset dismiss-alert">
+                <span class="x-icon"></span>
+            </button>
+        </div>
+    </div>
+</template>
+<template id="alert-message-template">
+    <div class="alert-container">
+        <div class="alert filled gradient">
+            <!-- Type message -->
+            <div class="alert-icon">
+                <svg version="1.1" class="alert-icon alert-icon-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 35" preserveAspectRatio="xMidYMid meet">
+                    <path fill="#EF2E2E" d="M38.03,35H1.97c-0.7,0-1.36-0.37-1.71-0.99c-0.35-0.61-0.35-1.36,0.01-1.97L18.3,0.98
+                        C18.65,0.37,19.3,0,20,0c0.7,0,1.35,0.37,1.7,0.98l18.03,31.06c0.36,0.61,0.36,1.36,0,1.97C39.39,34.63,38.73,35,38.03,35z
+                         M20,24.34c-1.46-0.01-2.66,1.16-2.68,2.63c0.02,1.47,1.22,2.64,2.68,2.63c1.46,0.01,2.66-1.16,2.68-2.63
+                        C22.66,25.5,21.46,24.32,20,24.34z M17.32,11.19l1.82,10.52h1.82l1.73-10.52H17.32L17.32,11.19z"/>
+                </svg>
+            </div>
+            <div class="alert-message"></div>
+
+            <!-- dismiss the alert is dissmissible -->
+            <button type="button" class="btn-reset dismiss-alert">
+                <span class="x-icon"></span>
+            </button>
+        </div>
+    </div>
+</template>
 </body>
 </html>
